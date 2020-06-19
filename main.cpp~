@@ -1,0 +1,13 @@
+#include "tools.h"
+#include "manager_view_impl.h"
+
+using namespace std;
+
+int main()
+{
+	EMIS* emis = EMIS::create();
+	emis->start;
+	
+	return 0;
+}
+

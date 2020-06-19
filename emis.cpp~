@@ -1,0 +1,33 @@
+#include "manager_view_impl.h"
+#include "emis.h"
+#include "tools.h"
+
+EMIS* EMIS::emis;
+
+EMIS::EMIS(void)
+{
+	init_id();
+	mgrView = new ManagerViewImpl;
+}
+
+EMIS::~EMIS(void)
+{
+	delete mgrView;
+}
+
+EMIS* EMIS::create(void)
+{
+	if(NULL == emis)
+	{
+		emis = new EMIS;
+	}
+	return emis;
+}
+
+void EMIS::start(void)
+{
+	
+}
+
+
+
